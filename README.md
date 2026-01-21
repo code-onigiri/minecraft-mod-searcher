@@ -26,3 +26,37 @@ Your app is ready to be deployed!
 ## Deployment
 
 Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
+
+---
+
+## Tests 🔧
+
+- Install dependencies with Bun:
+
+```bash
+bun install
+```
+
+- Run unit tests (Bun test runner):
+
+```bash
+bun test
+```
+
+- Run Playwright E2E tests (start dev server automatically via Playwright config):
+
+```bash
+bun x playwright test
+```
+
+- Install Playwright browsers (first time):
+
+```bash
+bun x playwright install --with-deps
+```
+
+You can also run both test suites together:
+
+```bash
+bun test && bun x playwright test
+```

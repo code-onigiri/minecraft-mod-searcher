@@ -1,34 +1,21 @@
 import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
   const [count, setCount] = createSignal(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://solidjs.com" target="_blank">
-          <img src={solidLogo} class="logo solid" alt="Solid logo" />
-        </a>
+    <div class="min-h-screen flex items-center justify-center p-6">
+      <div class="card w-full max-w-md shadow-xl">
+        <div class="card-body items-center text-center">
+          <h2 class="card-title">Minecraft Mod Searcher</h2>
+          <p class="text-sm opacity-70">Starter with <strong>Tailwind</strong> + <strong>daisyUI</strong></p>
+          <div class="card-actions">
+            <button class="btn btn-primary" onClick={() => setCount((c) => c + 1)}>Count: {count()}</button>
+            <a class="btn btn-ghost" href="https://github.com/code-onigiri/minecraft-mod-searcher">Repository</a>
+          </div>
+        </div>
       </div>
-      <h1>Vite + Solid</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count()}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Solid logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
